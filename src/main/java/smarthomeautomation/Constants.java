@@ -1,13 +1,16 @@
 package smarthomeautomation;
 
 public class Constants{
+    public interface Model{
+
+    }
     public enum SmartDevices{
         LIGHTBULB, CAMERA
     }
-    public enum BulbModels{
+    public enum BulbModels implements Model{
         LUMINABASIC, LUMINACOLOR, LUMINAPRO;
     }
-    public enum CameraModel{
+    public enum CameraModel implements Model{
         GUARDBASIC, GUARDELITE, GUARDPRO
     }
 }
