@@ -20,9 +20,18 @@ public abstract class LightBulb extends Device implements SmartLightBulb {
     public int getWattage(){
         return wattage;
     }
-    public String toString(){
-        return "Model "+model+" with color "+color+" wattage: "+wattage+" features "+features+" connectivity type "+connectivity;
+
+    @Override
+    public String toString() {
+        return "LightBulb{" +
+                "wattage=" + wattage +
+                ", color='" + color + '\'' +
+                ", model='" + model + '\'' +
+                ", features=" + features +
+                ", connectivity=" + connectivity +
+                '}';
     }
+
     public abstract SmartLightBulb clone();
 
 }

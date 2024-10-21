@@ -7,4 +7,5 @@ public interface SmartDevice {
     String getModel();
     List<String> getFeaturesList();
     List<String> getConnectivityList();
+    String toString();
 }

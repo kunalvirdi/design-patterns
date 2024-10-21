@@ -45,7 +45,14 @@ public abstract class BulbDecorator extends DeviceDecorator implements SmartLigh
         return new LuminaBasic(new ArrayList<String>(this.getConnectivityList()),new ArrayList<String>(this.getFeaturesList()),this.getColor(),this.getWattage());
     }
 
-    public String toString(){
-        return "Model "+getModel()+" with color "+getColor()+" wattage: "+getWattage()+" features "+getFeaturesList()+" connectivity type "+getConnectivityList();
+    @Override
+    public String toString() {
+        return "LightBulb{" +
+                "wattage=" + lightBulb.getWattage() +
+                ", color='" + lightBulb.getColor() + '\'' +
+                ", model='" + lightBulb.getModel() + '\'' +
+                ", features=" + lightBulb.getFeaturesList() +
+                ", connectivity=" + lightBulb.getConnectivityList()+
+                '}';
     }
 }
