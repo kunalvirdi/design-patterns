@@ -5,9 +5,9 @@ import smarthomeautomation.SmartDevice;
 
 
 public abstract class SmartDeviceFactory {
-    public abstract SmartDevice getSmartDeviceModel(String model);
+    public abstract SmartDevice getSmartDeviceModel(Constants.Model model);
 
-    public static SmartDevice getSmartDevice(Constants.SmartDevices type, String model){
+    public static SmartDevice getSmartDevice(Constants.SmartDevices type, Constants.BulbModels model){
         SmartDevice smartDevice;
         switch (type){
             case Constants.SmartDevices.LIGHTBULB ->{smartDevice = new SmartLightBulbs().getSmartDeviceModel(model);}
@@ -16,6 +16,4 @@ public abstract class SmartDeviceFactory {
         }
         return smartDevice;
     }
-
-
 }
